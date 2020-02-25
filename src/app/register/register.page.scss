@@ -1,0 +1,34 @@
+$colors:(
+/** primary **/
+
+--ion-color-primary: #3880ff, --ion-color-primary-contrast: #ffffff, --ion-color-primary-shade: #3171e0, --ion-color-primary-tint: #4c8dff, --ion-color-aqua:aqua, );
+$white-color: #fff;
+$height100: 100%;
+ion-grid {
+    width: 100%;
+    height: $height100;
+    clip-path: polygon(48% 0, 100% 0, 100% 100%, 49% 84%, 0 100%, 0% 60%, 0 0);
+    background-color: map-get($colors, --ion-color-aqua);
+}
+
+ion-row {
+    height: $height100;
+}
+
+ion-col {
+    border: 1px solid #488aff;
+    background: $white-color;
+}
+
+ion-button {
+    font-weight: 300;
+}
+
+@media (min-width: 240px) and (max-width: 768px) {
+    ion-grid {
+        background: map-get($colors, --ion-color-aqua);
+    }
+    ion-col {
+        border: none;
+    }
+}
